@@ -1,0 +1,121 @@
+/* SFXButton.css - 効果音付きボタンのスタイル */
+
+.sfx-button {
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #007bff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.sfx-button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.sfx-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.sfx-button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.sfx-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.sfx-button:disabled:hover {
+  background: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+/* バリエーション */
+.sfx-button.primary {
+  background: #007bff;
+  color: white;
+}
+
+.sfx-button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.sfx-button.success {
+  background: #28a745;
+  color: white;
+}
+
+.sfx-button.danger {
+  background: #dc3545;
+  color: white;
+}
+
+.sfx-button.warning {
+  background: #ffc107;
+  color: #212529;
+}
+
+.sfx-button.info {
+  background: #17a2b8;
+  color: white;
+}
+
+.sfx-button.light {
+  background: #f8f9fa;
+  color: #212529;
+  border: 1px solid #dee2e6;
+}
+
+.sfx-button.dark {
+  background: #343a40;
+  color: white;
+}
+
+/* サイズバリエーション */
+.sfx-button.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.sfx-button.large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* アニメーション効果 */
+.sfx-button.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.sfx-button.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.sfx-button.ripple:active::after {
+  width: 200px;
+  height: 200px;
+}

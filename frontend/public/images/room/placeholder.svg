@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Room placeholder">
+  <rect width="1280" height="720" fill="#eef1f5"/>
+  <path d="M0 520h1280v200H0z" fill="#d7dde6"/>
+  <path d="M120 140h1040v380H120z" fill="#ffffff" stroke="#9aa6b2" stroke-width="10"/>
+  <path d="M190 220h330v210H190zM590 220h500v64H590zM590 330h500v64H590z" fill="#cbd5e1"/>
+  <path d="M250 520h780v56H250z" fill="#94a3b8"/>
+  <path d="M330 576h70v92h-70zM880 576h70v92h-70z" fill="#64748b"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Player placeholder">
+  <rect width="512" height="512" fill="#eef7f4"/>
+  <circle cx="256" cy="176" r="82" fill="#66a89a"/>
+  <path d="M104 452c25-90 83-141 152-141s127 51 152 141H104z" fill="#3d7f72"/>
+  <path d="M205 164h102" stroke="#173f38" stroke-width="18" stroke-linecap="round"/>
+  <path d="M220 218c24 16 48 16 72 0" fill="none" stroke="#173f38" stroke-width="14" stroke-linecap="round"/>
+</svg>

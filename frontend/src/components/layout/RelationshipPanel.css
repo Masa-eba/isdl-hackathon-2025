@@ -1,0 +1,123 @@
+/* RelationshipPanel.css */
+
+.relationship-panel {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.relationship-panel-title {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.relationship-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.relationship-empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.relationship-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+.relationship-item:hover {
+  background: #e9ecef;
+}
+
+.relationship-character {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.relationship-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.relationship-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.relationship-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.relationship-grade {
+  font-size: 12px;
+  color: #666;
+}
+
+.relationship-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.relationship-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.relationship-level {
+  font-size: 11px;
+  color: #666;
+}
+
+.dating-indicator {
+  font-size: 14px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .relationship-panel {
+    padding: 10px;
+  }
+  
+  .relationship-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .relationship-name {
+    font-size: 13px;
+  }
+  
+  .relationship-grade {
+    font-size: 11px;
+  }
+}

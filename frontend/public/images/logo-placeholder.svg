@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-label="Lab Simulator">
+  <rect width="960" height="240" rx="24" fill="#111827"/>
+  <text x="480" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="76" font-weight="700" fill="#f9fafb">Lab Simulator</text>
+  <text x="480" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#9ca3af">Public Demo</text>
+</svg>

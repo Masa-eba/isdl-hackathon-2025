@@ -1,0 +1,79 @@
+/* LabRolesDisplay.css - 研究室役割表示コンポーネントのスタイル */
+
+.lab-roles-display {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.roles-header {
+  margin-bottom: 10px;
+}
+
+.roles-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.role-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.role-icon {
+  font-size: 1rem;
+}
+
+.role-name {
+  color: #333;
+  font-weight: 600;
+}
+
+.no-roles {
+  text-align: center;
+  padding: 10px;
+  color: #999;
+  font-style: italic;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .lab-roles-display {
+    padding: 12px;
+  }
+  
+  .roles-header h3 {
+    font-size: 1rem;
+  }
+  
+  .role-badge {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .role-icon {
+    font-size: 0.9rem;
+  }
+}

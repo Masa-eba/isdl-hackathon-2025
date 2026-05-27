@@ -1,0 +1,227 @@
+/* RoleSelectionBox.css - 役割選択コンポーネントのスタイル */
+
+.role-selection-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.role-selection-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.role-selection-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.role-selection-header p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.selection-status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4CAF50;
+  background: rgba(76, 175, 80, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.role-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid transparent;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.role-card.selected {
+  border-color: currentColor;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.role-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.role-card.disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.role-info {
+  text-align: center;
+}
+
+.role-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.role-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.selected-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.role-selection-footer {
+  text-align: center;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .role-selection-box {
+    padding: 10px;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+  
+  .role-selection-header {
+    margin-bottom: 20px;
+  }
+  
+  .role-selection-header h2 {
+    font-size: 2rem;
+  }
+  
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .role-card {
+    padding: 15px;
+  }
+  
+  .role-icon {
+    font-size: 2.5rem;
+  }
+  
+  .role-name {
+    font-size: 1.3rem;
+  }
+  
+  .confirm-button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* 高さが足りない場合の対応 */
+@media (max-height: 600px) {
+  .role-selection-box {
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+  
+  .role-selection-header {
+    margin-bottom: 15px;
+  }
+  
+  .role-selection-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .roles-grid {
+    margin-bottom: 15px;
+  }
+  
+  .role-card {
+    padding: 12px;
+  }
+  
+  .role-icon {
+    font-size: 2rem;
+  }
+}

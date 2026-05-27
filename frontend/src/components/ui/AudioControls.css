@@ -1,0 +1,146 @@
+/* AudioControls.css - BGM制御UIのスタイル */
+
+.audio-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.audio-controls.expanded {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.audio-toggle {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.audio-panel {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  min-width: 280px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.audio-section {
+  margin-bottom: 20px;
+}
+
+.audio-section:last-child {
+  margin-bottom: 0;
+}
+
+.audio-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.audio-control-group {
+  margin-bottom: 15px;
+}
+
+.audio-control-group:last-child {
+  margin-bottom: 0;
+}
+
+.audio-control-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.audio-control-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.audio-control-group input[type="range"] {
+  width: 100%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.current-track {
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .audio-controls {
+    background: rgba(30, 30, 30, 0.95);
+  }
+
+  .audio-controls.expanded {
+    background: rgba(30, 30, 30, 0.98);
+  }
+
+  .audio-panel {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .audio-control-group label {
+    color: #e0e0e0;
+  }
+
+  .current-track {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .audio-controls {
+    top: 10px;
+    right: 10px;
+  }
+
+  .audio-panel {
+    min-width: 200px;
+    right: -10px;
+  }
+
+  .audio-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

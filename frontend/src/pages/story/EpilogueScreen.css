@@ -1,0 +1,88 @@
+/* EpilogueScreen.css - エピローグ画面のスタイル */
+
+.epilogue-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.epilogue-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.epilogue-back-button {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.epilogue-back-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-1px);
+}
+
+.epilogue-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.epilogue-error h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.epilogue-error button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.epilogue-error button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .epilogue-controls {
+    top: 10px;
+    left: 10px;
+  }
+
+  .epilogue-back-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .epilogue-error h2 {
+    font-size: 20px;
+  }
+
+  .epilogue-error button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

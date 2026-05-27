@@ -1,0 +1,214 @@
+/* GameMenu.css */
+
+.game-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.game-menu {
+  background: white;
+  border-radius: 15px;
+  padding: 0;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.menu-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-section {
+  margin-bottom: 25px;
+}
+
+.menu-section h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.save-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slot-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slot-selection label {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.slot-selection select {
+  padding: 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.slot-selection select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.menu-button {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.menu-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* 開発者セクション */
+.developer-section {
+  border-top: 2px solid #ff6b6b;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.developer-section h3 {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.developer-button {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.developer-button:hover {
+  background: linear-gradient(135deg, #ee5a24, #ff6b6b) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 480px) {
+  .game-menu {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .menu-header {
+    padding: 15px;
+  }
+  
+  .menu-content {
+    padding: 15px;
+  }
+  
+  .menu-header h2 {
+    font-size: 1.3rem;
+  }
+}
